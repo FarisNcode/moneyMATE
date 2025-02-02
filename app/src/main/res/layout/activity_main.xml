@@ -132,8 +132,11 @@
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/blue"
                 android:padding="8dp"
+                android:paddingEnd="25dp"
                 android:text="History >"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:gravity="end" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -228,6 +231,7 @@
     </LinearLayout>
 
     <!-- Form to Add Pendapatan and Pengeluaran -->
+    <!-- Form to Add Pendapatan and Pengeluaran -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -242,20 +246,31 @@
             android:id="@+id/addIncomeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_border"
-            android:text="Add Pendapatan"
+            android:text="Tambah Pendapatan"
             android:textColor="@color/blue"
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Nominal Pendapatan -->
         <EditText
             android:id="@+id/editIncome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:hint="Enter amount (e.g., 500,000)"
+            android:background="@drawable/edittext_border"
+            android:hint="Masukkan jumlah pendapatan (e.g., 500,000)"
             android:inputType="numberDecimal"
             android:padding="10dp" />
+
+        <!-- Input Deskripsi Pendapatan -->
+        <EditText
+            android:id="@+id/editIncomeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border"
+            android:hint="Sumber pendapatan (e.g., gaji, bonus, bisnis)"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/saveIncomeButton"
@@ -265,7 +280,7 @@
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/blue"
             android:padding="8dp"
-            android:text="Save Pendapatan"
+            android:text="Simpan Pendapatan"
             android:textColor="@color/white" />
 
         <!-- Pengeluaran Form -->
@@ -274,19 +289,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Add Pengeluaran"
+            android:text="Tambah Pengeluaran"
             android:textColor="@color/blue"
             android:textSize="16sp"
             android:textStyle="bold" />
 
+        <!-- Input Nominal Pengeluaran -->
         <EditText
             android:id="@+id/editExpense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edittext_border"
-            android:hint="Enter amount (e.g., 200,000)"
+            android:hint="Masukkan jumlah pengeluaran (e.g., 200,000)"
             android:inputType="numberDecimal"
             android:padding="10dp" />
+
+        <!-- Input Deskripsi Pengeluaran -->
+        <EditText
+            android:id="@+id/editExpenseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_border"
+            android:hint="Keperluan pengeluaran (e.g., makan, transportasi, belanja)"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/saveExpenseButton"
@@ -296,10 +323,11 @@
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/blue"
             android:padding="8dp"
-            android:text="Save Pengeluaran"
+            android:text="Simpan Pengeluaran"
             android:textColor="@color/white" />
 
     </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
