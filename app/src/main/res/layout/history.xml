@@ -28,16 +28,159 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- RecyclerView for Transactions -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <!-- Hardcoded Dummy Data -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginTop="8dp"
-        android:padding="8dp"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:padding="8dp">
+
+        <!-- Transaction 1 (Income) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/transaction_border_income"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/transaction1_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2025-02-01"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction1_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$100"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction1_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purchase at Store A"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- Transaction 2 (Expense) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/transaction_border_expense"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/transaction2_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2025-02-02"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction2_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$50"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction2_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refund for Item B"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- Transaction 3 (Income) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/transaction_border_income"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/transaction3_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2025-02-03"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction3_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$200"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction3_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment for Service C"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- Transaction 4 (Expense) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/transaction_border_expense"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/transaction4_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2025-02-04"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction4_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$75"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/transaction4_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purchase at Store D"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
