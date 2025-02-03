@@ -41,13 +41,14 @@
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Welcome Text and User Name -->
+
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:padding="8dp"
-        android:text="Welcome"
+        android:text="Welcome,"
         android:textColor="@color/lightblue"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,15 +128,15 @@
             <!-- Cek Pengeluaran Button -->
             <Button
                 android:id="@+id/checkExpenses"
-                android:layout_width="380dp"
+                android:layout_width="348dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/blue"
+                android:gravity="start"
                 android:padding="8dp"
-                android:paddingEnd="25dp"
+                android:paddingStart="25dp"
                 android:text="History >"
-                android:textColor="@color/white"
-                android:gravity="end" />
+                android:textColor="@color/white" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -231,103 +232,102 @@
     </LinearLayout>
 
     <!-- Form to Add Pendapatan and Pengeluaran -->
-    <!-- Form to Add Pendapatan and Pengeluaran -->
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/rekeningCard"
-        tools:layout_editor_absoluteX="16dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/white"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="2dp"
+        app:layout_constraintTop_toBottomOf="@id/rekeningCard">
 
-        <!-- Pendapatan Form -->
-        <TextView
-            android:id="@+id/addIncomeLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tambah Pendapatan"
-            android:textColor="@color/blue"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <!-- Input Nominal Pendapatan -->
-        <EditText
-            android:id="@+id/editIncome"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_border"
-            android:hint="Masukkan jumlah pendapatan (e.g., 500,000)"
-            android:inputType="numberDecimal"
-            android:padding="10dp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="18dp">
 
-        <!-- Input Deskripsi Pendapatan -->
-        <EditText
-            android:id="@+id/editIncomeDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_border"
-            android:hint="Sumber pendapatan (e.g., gaji, bonus, bisnis)"
-            android:inputType="text"
-            android:padding="10dp"
-            android:layout_marginTop="8dp" />
+            <!-- Label Form -->
+            <TextView
+                android:id="@+id/formTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="Tambah Pendapatan"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/saveIncomeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/blue"
-            android:padding="8dp"
-            android:text="Simpan Pendapatan"
-            android:textColor="@color/white" />
+            <!-- Input Nominal -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan jumlah ..."
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/blue">
 
-        <!-- Pengeluaran Form -->
-        <TextView
-            android:id="@+id/addExpenseLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Tambah Pengeluaran"
-            android:textColor="@color/blue"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Input Nominal Pengeluaran -->
-        <EditText
-            android:id="@+id/editExpense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_border"
-            android:hint="Masukkan jumlah pengeluaran (e.g., 200,000)"
-            android:inputType="numberDecimal"
-            android:padding="10dp" />
+            <!-- Input Deskripsi -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Sumber pendapatan ..."
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/blue">
 
-        <!-- Input Deskripsi Pengeluaran -->
-        <EditText
-            android:id="@+id/editExpenseDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_border"
-            android:hint="Keperluan pengeluaran (e.g., makan, transportasi, belanja)"
-            android:inputType="text"
-            android:padding="10dp"
-            android:layout_marginTop="8dp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:padding="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/saveExpenseButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/blue"
-            android:padding="8dp"
-            android:text="Simpan Pengeluaran"
-            android:textColor="@color/white" />
+            <!-- Button Simpan -->
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/blue"
+                android:padding="12dp"
+                android:text="Simpan Pendapatan"
+                android:textColor="@color/white"
+                app:cornerRadius="12dp" />
 
-    </LinearLayout>
+            <!-- Button Toggle (Switch Form) -->
+            <Button
+                android:id="@+id/toggleFormButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/gray"
+                android:padding="12dp"
+                android:text="Tambah Pengeluaran"
+                android:textColor="@color/white"
+                app:cornerRadius="12dp" />
 
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
