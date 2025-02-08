@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/blue"/>
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/dark_blue"/>
+            <size android:width="300dp" android:height="300dp"/>
+        </shape>
+        <translate android:x="50dp" android:y="100dp"/>
+    </item>
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/dark_blue"/>
+            <size android:width="200dp" android:height="200dp"/>
+        </shape>
+        <translate android:x="200dp" android:y="400dp"/>
+    </item>
+</layer-list>
