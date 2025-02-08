@@ -1,0 +1,66 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Ikon kategori -->
+    <ImageView
+        android:id="@+id/transactionIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/account"
+        android:layout_marginEnd="10dp"/>
+
+    <!-- Detail transaksi -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/transactionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food and Beverage"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkgray"/>
+
+        <TextView
+            android:id="@+id/transactionCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="McDonald's"
+            android:textSize="12sp"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+
+    <!-- Waktu dan Jumlah -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/transactionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 160.000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:id="@+id/transactionTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 PM"
+            android:textSize="12sp"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+</LinearLayout>
