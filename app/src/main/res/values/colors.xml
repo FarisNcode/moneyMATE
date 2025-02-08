@@ -5,8 +5,11 @@
     <color name="cream">#F7F9FF</color>
     <color name="blue">#0A60A5</color>
     <color name="lightblue">#2A96EC</color>
+    <color name="lightblue2">#C994C5EC</color>
+    <color name="lightblue3">#C3BCE1FF</color>
     <color name="green">#4CAF50</color>
     <color name="red">#E7281A</color>
     <color name="gray">#97979C</color>
     <color name="darkgray">#3B3B40</color>
+
 </resources>
