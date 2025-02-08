@@ -87,7 +87,6 @@
             android:minHeight="30dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/border_gray"
-            android:backgroundTint="@android:color/transparent"
             android:paddingHorizontal="10dp"
             android:paddingVertical="6dp"
             android:text="Change"
@@ -97,7 +96,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/balanceAmount" />
 
-        <!-- Income Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/incomeCard"
             android:layout_width="0dp"
@@ -112,45 +110,73 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="4dp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:padding="6dp">
+                android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/incomeIcon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/upward"
-                    android:contentDescription="Income Icon"
-                    android:layout_marginEnd="10dp"/>
+                <!-- Persegi Light Blue (Lebih Besar) -->
+                <View
+                    android:id="@+id/lightBlueSquare"
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:background="@color/lightblue3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:radius="8dp"/> <!-- Membuat sudut tumpul -->
 
+                <!-- Persegi Blue (Lebih Kecil di Atas Light Blue) -->
+                <View
+                    android:id="@+id/blueSquare"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:background="@color/lightblue2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:radius="8dp"/> <!-- Membuat sudut tumpul -->
+
+                <!-- Isi Card -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:elevation="5dp"> <!-- Meningkatkan ketinggian agar tetap di atas -->
 
-                    <TextView
-                        android:id="@+id/incomeTitle"
+                    <ImageView
+                        android:id="@+id/incomeIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/upward"
+                        android:contentDescription="Income Icon"
+                        android:layout_marginEnd="10dp"/>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Income"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/gray"/>
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/incomeAmount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="RP 500,000"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/darkgray"/>
+                        <TextView
+                            android:id="@+id/incomeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Income"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray"/>
+
+                        <TextView
+                            android:id="@+id/incomeAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RP 500,000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/darkgray"
+                            android:elevation="10dp"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Expense Card -->
@@ -164,99 +190,134 @@
             app:layout_constraintStart_toEndOf="@id/incomeCard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/balanceAmount"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
-            android:layout_marginStart="4dp">
+            android:layout_marginEnd="2dp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:padding="6dp">
+                android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/expenseIcon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/downward"
-                    android:contentDescription="Expense Icon"
-                    android:layout_marginEnd="10dp"/>
+                <!-- Persegi Light Red (Lebih Besar) -->
+                <View
+                    android:id="@+id/lightRedSquare"
+                    android:layout_width="75dp"
+                    android:layout_height="35dp"
+                    android:background="@color/lightblue3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"/>
 
+                <!-- Persegi Red (Lebih Kecil di Atas Light Red) -->
+                <View
+                    android:id="@+id/redSquare"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:background="@color/lightblue2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <!-- Isi Card -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/expenseTitle"
+                    <ImageView
+                        android:id="@+id/expenseIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/downward"
+                        android:contentDescription="Expense Icon"
+                        android:layout_marginEnd="10dp"/>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Expense"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/gray"/>
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/expenseAmount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="RP 300,000"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/darkgray"/>
+                        <TextView
+                            android:id="@+id/expenseTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expense"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray"/>
+
+                        <TextView
+                            android:id="@+id/expenseAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RP 300,000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/darkgray"
+                            android:elevation="10dp"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
-        <!-- Container untuk History Transaksi -->
-        <LinearLayout
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/transactionSection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="6dp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="20dp"
+            android:backgroundTint="@color/white"
             app:layout_constraintTop_toBottomOf="@id/incomeCard"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <!-- Header Transaction -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/white"
-                android:paddingHorizontal="16dp"
-                android:paddingBottom="8dp"
-                android:gravity="center_vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <TextView
-                    android:layout_width="0dp"
+                <!-- Header Transaction -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Transaction"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/darkgray"/>
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="8dp"
+                    android:gravity="center_vertical">
 
-                <TextView
-                    android:id="@+id/seeAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="See All"
-                    android:textSize="14sp"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Transaction"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkgray"/>
+
+                    <TextView
+                        android:id="@+id/seeAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:textSize="14sp"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- RecyclerView untuk daftar transaksi -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/transactionList"
+                    android:layout_width="match_parent"
+                    android:layout_height="361dp"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="16dp" />
             </LinearLayout>
 
-            <!-- RecyclerView untuk daftar transaksi -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/transactionList"
-                android:layout_width="match_parent"
-                android:layout_height="359dp"
-                android:clipToPadding="false"
-                android:paddingHorizontal="16dp" />
-        </LinearLayout>
-
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

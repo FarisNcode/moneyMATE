@@ -24,5 +24,9 @@ class MainActivity : AppCompatActivity() {
             val window: Window = window
             window.statusBarColor = ContextCompat.getColor(this, R.color.cream)
         }
+
+        findViewById<FrameLayout>(R.id.nav_add).setOnClickListener {
+            AddTransactionBottomSheet().show(supportFragmentManager, "AddTransaction")
+        }
     }
 }
