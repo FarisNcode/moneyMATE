@@ -1,14 +1,14 @@
 package com.example.moneymate
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.*
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import java.text.SimpleDateFormat
-import android.app.AlertDialog
 import java.util.*
 
 class AddTransactionBottomSheet : BottomSheetDialogFragment() {
@@ -22,6 +22,11 @@ class AddTransactionBottomSheet : BottomSheetDialogFragment() {
     private lateinit var rbIncome: RadioButton
     private lateinit var rbExpense: RadioButton
     private val calendar = Calendar.getInstance()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(STYLE_NORMAL, R.style.BottomSheetDialogTheme) // Gunakan style fullscreen
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,11 +48,18 @@ class AddTransactionBottomSheet : BottomSheetDialogFragment() {
         rbIncome = view.findViewById(R.id.rb_income)
         rbExpense = view.findViewById(R.id.rb_expense)
 
-        // Event Listener
+        // Event Listeners
         etDate.setOnClickListener { showDatePicker() }
         etCategory.setOnClickListener { showCategorySelection() }
         etWallet.setOnClickListener { showWalletSelection() }
         btnSave.setOnClickListener { saveTransaction() }
+
+        // Pastikan BottomSheet terbuka sepenuhnya
+        view.viewTreeObserver.addOnGlobalLayoutListener {
+            val parent = view.parent as View
+            val behavior = BottomSheetBehavior.from(parent)
+            behavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
     }
 
     private fun showDatePicker() {
