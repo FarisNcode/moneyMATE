@@ -5,24 +5,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bluee"
+    android:background="@drawable/bg1"
     tools:context=".MainActivity">
 
     <!-- Logo atau Nama App -->
 
     <!-- Judul -->
 
+    <!-- Deskripsi -->
     <TextView
         android:id="@+id/tvLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Money  Mate"
+        android:layout_marginTop="76dp"
+        android:text="Money Mate"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,28 +31,29 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Water delivery"
-        android:textSize="24sp"
+        android:layout_marginTop="152dp"
+        android:text="Finance Management"
         android:textColor="@android:color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/tvLogo"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp"/>
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLogo" />
 
-    <!-- Deskripsi -->
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="We deliver water at any point of the Earth in 30 minutes"
+        android:text="Track, save, and manage your finances with ease!"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
 
     <!-- Tombol Login -->
 
@@ -77,12 +79,13 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="360dp"
-        android:backgroundTint="@android:color/white"
+        android:background="@drawable/button_background"
         android:text="Log in"
-        android:textColor="@color/bluee"
+        android:textColor="@color/blue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

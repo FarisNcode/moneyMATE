@@ -1,21 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg2"
     tools:context=".RegisterActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login Page"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+        android:padding="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Tombol Back -->
+
+        <!-- Gambar Gelombang (Background Atas) -->
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Kembali"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgWave"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="60dp"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Text Welcome -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create\nAccount"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="5sp"
+            app:layout_constraintTop_toTopOf="@id/imgWave"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="40dp" />
+
+        <!-- Input Username -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Username"
+            android:textSize="16sp"
+            android:background="@drawable/edittext_background"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+            android:layout_marginTop="30dp" />
+
+        <!-- Input Phone -->
+        <EditText
+            android:id="@+id/etTelp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Phone"
+            android:textSize="16sp"
+            android:background="@drawable/edittext_background"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etUsername"
+            android:layout_marginTop="20dp" />
+
+        <!-- Input Norek -->
+        <EditText
+            android:id="@+id/etNorek"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Norek"
+            android:textSize="16sp"
+            android:background="@drawable/edittext_background"
+            android:paddingStart="15dp"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etTelp"
+            android:layout_marginTop="20dp" />
+
+        <!-- Input Password -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:textSize="16sp"
+            android:background="@drawable/edittext_background"
+            android:paddingStart="15dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/etNorek"
+            android:layout_marginTop="20dp" />
+
+        <!-- Lupa Password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etPassword"
+            android:layout_marginTop="10dp" />
+
+        <!-- Tombol Login -->
+
+        <Button
+            android:id="@+id/btnRegis"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_border"
+            android:backgroundTint="@color/bluee"
+            android:text="Registrasi"
+            android:textColor="@color/bluee"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="196dp"
+            android:text="Sudah punya akun? Login di sini"
+            android:textColor="@color/bluee"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
+
+
+        <!-- Tombol Sign Up -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
