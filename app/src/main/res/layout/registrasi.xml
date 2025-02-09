@@ -12,15 +12,11 @@
         android:layout_height="wrap_content"
         android:padding="30dp">
 
-        <!-- Tombol Back -->
-
-        <!-- Gambar Gelombang (Background Atas) -->
-
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="51dp"
             android:layout_height="50dp"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="-15dp"
             android:layout_marginTop="8dp"
             android:background="?attr/selectableItemBackground"
             android:contentDescription="Kembali"
@@ -37,7 +33,6 @@
             android:scaleType="fitXY"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Text Welcome -->
         <TextView
             android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
@@ -51,7 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="40dp" />
 
-        <!-- Input Username -->
         <EditText
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
@@ -64,7 +58,6 @@
             app:layout_constraintTop_toBottomOf="@id/tvWelcome"
             android:layout_marginTop="30dp" />
 
-        <!-- Input Phone -->
         <EditText
             android:id="@+id/etTelp"
             android:layout_width="match_parent"
@@ -77,12 +70,11 @@
             app:layout_constraintTop_toBottomOf="@id/etUsername"
             android:layout_marginTop="20dp" />
 
-        <!-- Input Norek -->
         <EditText
             android:id="@+id/etNorek"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Norek"
+            android:hint="No rek"
             android:textSize="16sp"
             android:background="@drawable/edittext_background"
             android:paddingStart="15dp"
@@ -90,7 +82,6 @@
             app:layout_constraintTop_toBottomOf="@id/etTelp"
             android:layout_marginTop="20dp" />
 
-        <!-- Input Password -->
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
@@ -101,10 +92,10 @@
             android:paddingStart="15dp"
             android:inputType="textPassword"
             android:textColorHint="@color/gray"
+            android:drawableEnd="@drawable/chevron_right_24"
             app:layout_constraintTop_toBottomOf="@id/etNorek"
             android:layout_marginTop="20dp" />
 
-        <!-- Lupa Password -->
         <TextView
             android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
@@ -117,15 +108,14 @@
             app:layout_constraintTop_toBottomOf="@id/etPassword"
             android:layout_marginTop="10dp" />
 
-        <!-- Tombol Login -->
-
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegis"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="120dp"
-            android:background="@drawable/button_border"
-            android:backgroundTint="@color/bluee"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeColor="@color/bluee"
+            app:strokeWidth="2dp"
             android:text="Registrasi"
             android:textColor="@color/bluee"
             android:textStyle="bold"
@@ -144,9 +134,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
-
-
-        <!-- Tombol Sign Up -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
