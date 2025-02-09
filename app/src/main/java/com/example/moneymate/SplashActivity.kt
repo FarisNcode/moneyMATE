@@ -46,7 +46,7 @@ class SplashActivity : Activity() {
 
         // Handler untuk pindah ke MainActivity setelah delay 2 detik
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, WelcomeActivity::class.java))
             finish()
         }, 2000)
     }

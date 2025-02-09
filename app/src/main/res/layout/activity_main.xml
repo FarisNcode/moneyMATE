@@ -412,9 +412,13 @@
             android:padding="8dp">
 
             <ImageView
+                android:id="@+id/accountt"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/account"/>
+                android:src="@drawable/account"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="openAccountScreen" />
 
         </LinearLayout>
 
