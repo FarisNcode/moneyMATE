@@ -79,19 +79,18 @@
             android:layout_marginTop="8dp"/>
 
         <!-- Tombol Change -->
-        <Button
-            android:id="@+id/changeBalanceButton"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
             android:minWidth="100dp"
             android:minHeight="30dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/border_gray"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="6dp"
             android:text="Change"
-            android:textColor="@color/gray"
-            android:textSize="12sp"
+            android:textColor="@color/darkgray"
+            android:textStyle="bold"
+            app:strokeColor="@color/darkgray"
+            app:strokeWidth="2dp"
             app:layout_constraintBottom_toBottomOf="@id/balanceAmount"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/balanceAmount" />
@@ -412,9 +411,13 @@
             android:padding="8dp">
 
             <ImageView
+                android:id="@+id/accountt"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/account"/>
+                android:src="@drawable/account"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="openAccountScreen" />
 
         </LinearLayout>
 

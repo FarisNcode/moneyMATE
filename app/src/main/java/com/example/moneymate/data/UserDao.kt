@@ -2,14 +2,15 @@ package com.example.moneymate.data
 
 import androidx.room.*
 
+
 @Dao
 interface UserDao {
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun insertUser(user: User)
 
-    @Query("SELECT * FROM users WHERE username = :username AND password = :password LIMIT 1")
-    suspend fun login(username: String, password: String): User?
+    @Query("SELECT * FROM users WHERE username = :username LIMIT 1")
+    suspend fun getUserByUsername(username: String): User?
 
-    @Query("SELECT * FROM users WHERE id_user = :id LIMIT 1")
-    suspend fun getUserById(id: Int): User?
+    @Query("SELECT * FROM users WHERE no_rek = :noRek LIMIT 1")
+    suspend fun getUserByNoRek(noRek: String): User?
 }

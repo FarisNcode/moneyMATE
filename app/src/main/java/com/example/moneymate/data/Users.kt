@@ -10,6 +10,5 @@ data class User(
     val telp: String,
     val no_rek: String,
     val password: String,
-    val email: String,
     val level: String
 )

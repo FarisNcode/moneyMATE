@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:padding="30dp">
 
-        <!-- Tombol Back -->
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="40dp"
@@ -26,7 +25,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Gambar Gelombang (Background Atas) -->
         <ImageView
             android:id="@+id/imgWave"
             android:layout_width="match_parent"
@@ -35,7 +33,6 @@
             android:scaleType="fitXY"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <!-- Text Welcome -->
         <TextView
             android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
@@ -49,9 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="30dp"/>
 
-        <!-- Input Email -->
-
-        <!-- Input Password -->
         <EditText
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
@@ -83,7 +77,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"/>
 
-        <!-- Lupa Password -->
         <TextView
             android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
@@ -95,13 +88,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etPassword"
             android:layout_marginTop="10dp"/>
-
-        <!-- Tombol Login -->
-
-        <!-- Tulisan "or" -->
-
-
-        <!-- Tombol Sign Up -->
 
         <Button
             android:id="@+id/btnLogin"
